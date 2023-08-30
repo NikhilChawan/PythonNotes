@@ -1,0 +1,62 @@
+class Employee:
+    def __init__(self):
+        pass
+    def m1(self):
+        print("Age")
+        print("Name")
+        print("City")
+
+class Extended_emp(Employee):
+    def m1(self):
+        super().m1()
+        print("Instagram id")
+
+class FacebookAddEmp(Extended_emp):
+    def m1(self):
+        super().m1()
+        print("Facebook id")
+obj = FacebookAddEmp()
+obj.m1()
+
+
+
+
+class A:
+    def m1(self):
+        print("in m1 from A")
+class B:
+    def m1(self):
+        print("in m1 from B")
+class C(B):
+    def m1(self):
+        print("in m1 from C")
+class D(C):
+    def m1(self):
+        super(B, self).m1()
+        print("in m1 from D")
+
+obj = D()
+obj.m1()
+
+
+
+class X:
+    def m1(self):
+        super().m1()
+        print("in m1 from x")
+class A(X):
+    def m1(self):
+        super().m1()
+        print("in m1 from A")
+class B:
+    def m1(self):
+        print("in m1 from B")
+class C(A,B):
+    def m1(self):
+        super().m1()
+        print("in m1 from C")
+
+obj = C()
+obj.m1()
+
+
